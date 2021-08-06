@@ -5,7 +5,7 @@ This is a SQLite database of addresses from several blockchains. It's obtained b
 
 Exceptions: I didn't download all the million of shitcoin pools from uniswap and pancakeswap, only pools with at least 10 transactions. Also, etherscan-like scanners only allow for first 10000 transactions to be accessed via API, so children addresses will be missing from especially prolific deployers and factories.
 
-The database will not update automatically. I may occasionally update it. You can create your own copy with the code; it requires is BeautifulSoup for scraping, and cookie and API key from each scanner for the blockchains you want. If you're doing ETH or BSC it will take several hours.
+The database will not update automatically. I may occasionally update it. You can create your own copy with the code; it requires BeautifulSoup for scraping, and cookie and API key from each scanner for the blockchains you want. If you're doing ETH or BSC it will take several hours.
 
 Currently the database has:
 * ~160K ETH addresses
