@@ -1,4 +1,7 @@
+import os
 import subprocess
 # import sqlite_web
 
-subprocess.check_output(['sqlite_web' ,'../data/addresses.db'])
+ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+subprocess.check_output(['sqlite_web', ROOT_DIR + '/data/addresses.db'])
