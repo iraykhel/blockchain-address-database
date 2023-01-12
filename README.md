@@ -8,6 +8,7 @@ Currently the database has:
 * ~54K Fantom addresses
 * ~5K Arbitrum addresses
 * ~3K Optimism addresses
+
 And also some addresses for Cronos, Gnossis, Aurora, Boba, HECO, CELO, Moonbeam, Moonriver
 
 I have not updated the code. The scanners are too finicky and I don't want to spend time maintaining it. Let me know if you have any questions.
