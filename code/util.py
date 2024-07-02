@@ -1,5 +1,6 @@
 import decimal
 import time
+import os
 from collections import defaultdict
 import datetime
 import pprint
@@ -98,6 +99,8 @@ class Logger:
     def buf_to_file(self,filename):
         buffer = self.files[filename]['buffer']
         if len(buffer) > 0:
+            if not os.path.exists('logs'):
+                os.makedirs('logs')
             myfile = open('logs/' + filename, "a", encoding="utf-8")
             myfile.write(''.join(buffer))
             myfile.close()

@@ -42,15 +42,18 @@ class Chain:
 
         accounts_labels = []
         for entry in dropdowns:
-            label_url = entry.find('button')['data-url']
-            label = entry.find('span').contents[0]
-            sections = entry.find_all('a')
-            # print(label, sections)
-            for section in sections:
-                tp = section.contents[-1]
-                if 'Accounts' in tp:
-                    accounts_labels.append((label.strip(),label_url))
-                    break
+            try:
+                label_url = entry.find('button')['data-url']
+                label = entry.find('span').contents[0]
+                sections = entry.find_all('a')
+                # print(label, sections)
+                for section in sections:
+                    tp = section.contents[-1]
+                    if 'Accounts' in tp:
+                        accounts_labels.append((label.strip(),label_url))
+                        break
+            except Exception:
+                log("Skipping dropdown label - data-url don't exist")
         return accounts_labels
 
 
